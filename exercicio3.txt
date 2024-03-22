@@ -1,0 +1,124 @@
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 1
+# Criando um vetor com 5 elementos do tipo float
+vetor_float = [1.5, 2.3, 3.7, 4.2, 5.9]
+
+print(vetor_float)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 2
+# Encontrando o menor elemento no vetor
+menor_elemento = min(vetor_float)
+
+print("O menor elemento no vetor é:", menor_elemento)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 3
+# Substituindo números ímpares por -1
+for i in range(len(vetor_float)):
+    if vetor_float[i] % 2 != 0:
+        vetor_float[i] = -1
+
+print("Vetor após substituir números ímpares por -1:", vetor_float)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 4
+# Imprimindo o tamanho do vetor
+tamanho_vetor = len(vetor_float)
+
+print("O tamanho do vetor é:", tamanho_vetor)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 5
+# Acrescentando um número na posição 4
+numero = 8.6
+posicao = 4
+vetor_float.insert(posicao, numero)
+
+print("Vetor após acrescentar um número na posição 4:", vetor_float)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 6
+def encontrar_menor(lista):
+    
+    if len(lista) == 0:
+        return None  # Se a lista estiver vazia, retorna None
+
+    # Retorna o menor valor na lista
+    return min(lista)
+
+# Exemplo de uso:
+numeros = [5, 2, 8, 1, 9]
+menor_valor = encontrar_menor(numeros)
+print("O menor valor na lista é:", menor_valor)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 7
+def soma_numeros_pares(lista):
+    soma = 0
+    for num in lista:
+        if num % 2 == 0:
+            soma += num
+    return soma
+
+# Exemplo de uso:
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+soma_pares = soma_numeros_pares(numeros)
+print("A soma dos números pares na lista é:", soma_pares)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 8
+def calcular_perimetro_quadrado(lado):
+    """
+    Calcula o perímetro de um quadrado dado o comprimento do lado.
+
+    Argumentos:
+    lado: Comprimento do lado do quadrado.
+
+    Retorna:
+    O perímetro do quadrado.
+    """
+    return 4 * lado
+
+# Exemplo de uso:
+comprimento_lado = 5
+perimetro = calcular_perimetro_quadrado(comprimento_lado)
+print("O perímetro do quadrado com lado de comprimento", comprimento_lado, "é:", perimetro)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 9
+def minutos_para_segundos(tempo_minutos):
+    """
+    Converte o tempo de minutos para segundos.
+
+    Argumentos:
+    tempo_minutos: Tempo em minutos.
+
+    Retorna:
+    O tempo convertido em segundos.
+    """
+    return tempo_minutos * 60
+
+# Exemplo de uso:
+tempo_em_minutos = 10
+tempo_em_segundos = minutos_para_segundos(tempo_em_minutos)
+print("O tempo de", tempo_em_minutos, "minutos é igual a", tempo_em_segundos, "segundos.")
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 10
+def calcular_quadrado(numero):
+    """
+    Calcula o quadrado de um número.
+
+    Argumentos:
+    numero: O número para o qual o quadrado será calculado.
+
+    Retorna:
+    O quadrado do número.
+    """
+    return numero ** 2
+
+# Exemplo de uso:
+numero = 5
+quadrado = calcular_quadrado(numero)
+print("O quadrado de", numero, "é:", quadrado)

@@ -1,0 +1,134 @@
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 1
+# Lista para armazenar os números inseridos
+numeros = []
+
+# Solicita ao usuário para inserir 5 números
+for i in range(5):
+    numero = float(input("Digite o {}º número: ".format(i + 1)))
+    numeros.append(numero)
+
+# Imprime o quadrado de cada número
+print("O quadrado de cada número é:")
+for numero in numeros:
+    quadrado = numero ** 2
+    print("O quadrado de", numero, "é", quadrado)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 2
+# Solicita ao usuário para inserir o número de vezes que deseja imprimir "Python"
+num_vezes = int(input("Digite o número de vezes que deseja imprimir a palavra 'Python': "))
+
+# Imprime a palavra "Python" o número de vezes especificado pelo usuário
+for _ in range(num_vezes):
+    print("Python")
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 3
+# Inicialização de variáveis
+atletas = []  # Lista para armazenar as informações dos atletas
+soma_idade = 0  # Variável para armazenar a soma das idades dos atletas
+contagem_atletas = 0  # Variável para contar o número de atletas
+
+# Leitura das informações dos atletas
+while True:
+    nome = input("Digite o nome do atleta (ou 'fim' para encerrar): ")
+    if nome.lower() == 'fim':
+        break  # Encerra o loop se o usuário digitar 'fim'
+    
+    sexo = input("Digite o sexo do atleta (M para masculino, F para feminino): ")
+    idade = int(input("Digite a idade do atleta: "))
+    peso = float(input("Digite o peso do atleta (em kg): "))
+    altura = float(input("Digite a altura do atleta (em metros): "))
+
+    atleta = {'nome': nome, 'sexo': sexo, 'idade': idade, 'peso': peso, 'altura': altura}
+    atletas.append(atleta)
+    soma_idade += idade
+    contagem_atletas += 1
+
+# Verificação do atleta masculino mais alto e da atleta feminina mais pesada
+mais_alto_masculino = None
+mais_pesada_feminina = None
+
+for atleta in atletas:
+    if atleta['sexo'].upper() == 'M':
+        if mais_alto_masculino is None or atleta['altura'] > mais_alto_masculino['altura']:
+            mais_alto_masculino = atleta
+    elif atleta['sexo'].upper() == 'F':
+        if mais_pesada_feminina is None or atleta['peso'] > mais_pesada_feminina['peso']:
+            mais_pesada_feminina = atleta
+
+# Cálculo da média de idade dos atletas
+if contagem_atletas > 0:
+    media_idade = soma_idade / contagem_atletas
+else:
+    media_idade = 0
+
+# Impressão dos resultados
+print("\nResultados:")
+if mais_alto_masculino is not None:
+    print("Atleta masculino mais alto:", mais_alto_masculino['nome'], "- Altura:", mais_alto_masculino['altura'], "m")
+else:
+    print("Não há atletas masculinos.")
+    
+if mais_pesada_feminina is not None:
+    print("Atleta feminina mais pesada:", mais_pesada_feminina['nome'], "- Peso:", mais_pesada_feminina['peso'], "kg")
+else:
+    print("Não há atletas femininas.")
+    
+print("Média de idade dos atletas:", media_idade, "anos")
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 4
+# Solicita ao usuário para inserir um número
+num = int(input("Digite um número maior que zero: "))
+
+# Inicializa a soma dos múltiplos de 5
+soma_multiplos_5 = 0
+
+# Itera sobre o intervalo aberto entre 1 e num
+for i in range(1, num):
+    if i % 5 == 0:  # Verifica se i é um múltiplo de 5
+        soma_multiplos_5 += i
+
+# Imprime a soma dos múltiplos de 5
+print("A soma dos múltiplos de 5 no intervalo aberto entre 1 e", num, "é:", soma_multiplos_5)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 5
+# Inicializa a variável para armazenar a soma
+soma = 0
+
+# Loop para imprimir os números de 1 a 100 e calcular a soma
+for i in range(1, 101):
+    print(i)
+    soma += i
+
+# Imprime a soma dos números
+print("A soma de todos os números de 1 a 100 é:", soma)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 6
+# Inicializa a variável para armazenar a soma
+soma = 0
+
+# Inicializa o contador
+contador = 1
+
+# Loop para imprimir os números de 1 a 100 e calcular a soma
+while contador <= 100:
+    print(contador)
+    soma += contador
+    contador += 1
+
+# Imprime a soma dos números
+print("A soma de todos os números de 1 a 100 é:", soma)
+
+
+
+

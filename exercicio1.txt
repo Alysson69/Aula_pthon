@@ -1,0 +1,210 @@
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 1
+def imprimir_se_maior_que_20(numero):
+    """
+    Imprime o número fornecido se ele for maior que 20.
+
+    Argumentos:
+    numero: O número a ser verificado.
+    """
+    if numero > 20:
+        print("O número", numero, "é maior que 20.")
+
+# Solicita ao usuário para inserir um número
+numero = float(input("Digite um número: "))
+
+# Verifica se o número é maior que 20 e o imprime, se for
+imprimir_se_maior_que_20(numero)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 2
+def verificar_multiplo_de_3(numero):
+    """
+    Verifica se o número fornecido é um múltiplo de 3 e imprime a mensagem correspondente.
+
+    Argumentos:
+    numero: O número a ser verificado.
+    """
+    if numero % 3 == 0:
+        print("O número", numero, "é múltiplo de 3.")
+    else:
+        print("O número", numero, "não é múltiplo de 3.")
+
+# Solicita ao usuário para inserir um número
+numero = int(input("Digite um número: "))
+
+# Verifica se o número é um múltiplo de 3 e imprime a mensagem correspondente
+verificar_multiplo_de_3(numero)
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 3
+def verificar_divisivel_por_3_e_7(numero):
+    """
+    Verifica se o número fornecido é divisível por 3 e por 7 e imprime a mensagem correspondente.
+
+    Argumentos:
+    numero: O número a ser verificado.
+    """
+    if numero % 3 == 0 and numero % 7 == 0:
+        print("O número", numero, "é divisível por 3 e por 7.")
+    else:
+        print("O número", numero, "não é divisível por 3 e por 7.")
+
+# Solicita ao usuário para inserir um número
+numero = int(input("Digite um número: "))
+
+# Verifica se o número é divisível por 3 e por 7 e imprime a mensagem correspondente
+verificar_divisivel_por_3_e_7(numero)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 4
+def calcular_novo_saldo(saldo):
+    """
+    Calcula o novo saldo após um reajuste de 2%.
+
+    Argumentos:
+    saldo: O saldo da aplicação.
+
+    Retorna:
+    O novo saldo após o reajuste.
+    """
+    novo_saldo = saldo * 1.02  # Aumento de 2%
+    return novo_saldo
+
+# Solicita ao usuário para inserir o saldo da aplicação
+saldo_atual = float(input("Digite o saldo atual da aplicação: "))
+
+# Calcula o novo saldo após o reajuste de 2%
+novo_saldo = calcular_novo_saldo(saldo_atual)
+
+# Imprime o novo saldo
+print("O novo saldo após o reajuste de 2% é:", novo_saldo)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 5
+def arredondar_nota(nota):
+    """
+    Arredonda a nota para 7 se for maior ou igual a 6.5.
+
+    Argumentos:
+    nota: A nota do aluno.
+
+    Retorna:
+    A nova nota após o arredondamento.
+    """
+    if nota >= 6.5:
+        return 7
+    else:
+        return nota
+
+# Solicita ao usuário para inserir a nota do aluno
+nota_aluno = float(input("Digite a nota do aluno: "))
+
+# Calcula a nova nota após o arredondamento
+nova_nota = arredondar_nota(nota_aluno)
+
+# Imprime a nova nota
+print("A nova nota do aluno após o arredondamento é:", nova_nota)
+
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 6
+def calcular(operacao, num1, num2):
+    """
+    Calcula o resultado da operação fornecida com os dois números fornecidos.
+
+    Argumentos:
+    operacao: A operação a ser realizada ('+', '-', '*', ou '/').
+    num1: O primeiro número.
+    num2: O segundo número.
+
+    Retorna:
+    O resultado da operação.
+    """
+    if operacao == '+':
+        return num1 + num2
+    elif operacao == '-':
+        return num1 - num2
+    elif operacao == '*':
+        return num1 * num2
+    elif operacao == '/':
+        if num2 != 0:  # Verifica se num2 é diferente de zero para evitar divisão por zero
+            return num1 / num2
+        else:
+            return "Erro: Divisão por zero!"
+    else:
+        return "Erro: Operação inválida!"
+
+# Solicita ao usuário para inserir a operação e os números
+operacao = input("Digite a operação (+, -, *, /): ")
+numero1 = float(input("Digite o primeiro número: "))
+numero2 = float(input("Digite o segundo número: "))
+
+# Calcula e imprime o resultado da operação
+resultado = calcular(operacao, numero1, numero2)
+print("O resultado da operação é:", resultado)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 7
+# Solicita ao usuário para inserir seu nome e sexo
+nome = input("Digite seu nome: ")
+sexo = input("Digite seu sexo (M para masculino ou F para feminino): ")
+
+# Verifica se a idade é igual a 18 e o sexo é masculino
+if sexo.upper() == 'M':
+    idade = int(input("Digite sua idade: "))  # Solicita a idade apenas se o sexo for masculino
+    if idade == 18:
+        print("Serviço militar obrigatório")
+    else:
+        print("Liberado do serviço militar obrigatório")
+else:
+    print("Liberado do serviço militar obrigatório")
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 8
+# Solicita ao usuário para inserir o salário atual
+salario = float(input("Digite o salário atual do funcionário: "))
+
+# Calcula o imposto de acordo com a tabela
+if salario <= 500:
+    imposto = 0
+elif salario <= 1000:
+    imposto = salario * 0.05
+elif salario <= 1500:
+    imposto = salario * 0.07
+else:
+    imposto = salario * 0.1
+
+# Imprime o valor do imposto a ser pago
+print("O valor do imposto a ser pago é:", imposto)
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 9
+# Solicita ao usuário para inserir sua idade
+idade = int(input("Digite sua idade: "))
+
+# Verifica a faixa etária com base na idade e mostra a mensagem correspondente
+if idade <= 18:
+    print("Você é menor de idade.")
+elif idade >= 65:
+    print("Você é do Clube Nissei.")
+else:
+    print("Você é um adulto ativo.")
+
+
+____________________________________________________________________________________________________________________________________________________
+#Exercicio 10
+# Pergunta ao usuário se ele possui irmãos
+resposta = input("Você possui irmãos? (Digite 'sim' ou 'não'): ")
+
+# Verifica se o usuário possui irmãos e, se sim, solicita o número de irmãos
+if resposta.lower() == 'sim':
+    numero_irmaos = int(input("Quantos irmãos você tem? "))
+    print("Você tem", numero_irmaos, "irmãos.")
+else:
+    print("Você não possui irmãos.")
